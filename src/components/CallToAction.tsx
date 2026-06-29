@@ -1,4 +1,4 @@
-import { Phone, Globe, ArrowRight } from "lucide-react";
+import { Phone, Globe, ClipboardCheck } from "lucide-react";
 import { site } from "@/lib/site";
 
 export default function CallToAction() {
@@ -31,16 +31,17 @@ export default function CallToAction() {
             {site.phoneDisplay}
           </a>
           <a
-            href="#top"
+            href={site.phoneHref}
             className="inline-flex items-center gap-2 rounded-md border-2 border-white/70 px-8 py-4 text-lg font-extrabold text-white transition-colors hover:bg-white/10"
           >
-            Request Online <ArrowRight className="h-5 w-5" />
+            <ClipboardCheck className="h-5 w-5" />
+            Get a Free Estimate
           </a>
         </div>
 
         <p className="mt-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-white/90">
           <Globe className="h-4 w-4" />
-          {site.website}
+          www.{site.website}
         </p>
       </div>
     </section>

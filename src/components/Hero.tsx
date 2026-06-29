@@ -13,8 +13,8 @@ export default function Hero() {
     <section id="top" className="relative isolate overflow-hidden bg-charcoal">
       {/* Background image */}
       <Image
-        src="/images/hero.png"
-        alt="Lee Roofing technician inspecting a newly shingled roof at sunset"
+        src="/images/hero-drone.jpg"
+        alt="Aerial drone view of a freshly installed Lee Roofing shingle roof"
         fill
         priority
         sizes="100vw"

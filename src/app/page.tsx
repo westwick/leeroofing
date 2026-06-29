@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Promise from "@/components/Promise";
+import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import Locations from "@/components/Locations";
 import CallToAction from "@/components/CallToAction";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <Gallery />
         <Promise />
         <Reviews />
         <Locations />

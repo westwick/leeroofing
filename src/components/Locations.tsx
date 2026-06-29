@@ -11,29 +11,6 @@ const mississippi = [
   "Biloxi",
 ];
 
-const nevada = ["Reno", "Carson City", "Sparks"];
-
-function CityGroup({ label, cities }: { label: string; cities: string[] }) {
-  return (
-    <div>
-      <h3 className="flex items-center justify-center gap-2 font-display text-base font-bold uppercase tracking-[0.15em] text-white">
-        <span className="h-2.5 w-2.5 rounded-full bg-brand" />
-        {label}
-      </h3>
-      <ul className="mt-4 flex flex-wrap justify-center gap-2.5">
-        {cities.map((city) => (
-          <li key={city}>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-sm font-bold text-silver backdrop-blur transition-colors hover:border-brand/50 hover:text-white">
-              <MapPin className="h-3.5 w-3.5 text-brand" />
-              {city}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export default function Locations() {
   return (
     <section
@@ -64,20 +41,25 @@ export default function Locations() {
             Areas We Serve
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold uppercase leading-tight text-white sm:text-4xl md:text-5xl">
-            Proudly Serving the Gulf Coast
-            <span className="block text-silver">&amp; Northern Nevada</span>
+            Proudly Serving the
+            <span className="block text-silver">Mississippi Gulf Coast</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-silver md:text-lg">
-            From the Mississippi coastline to the high desert, we bring the same
-            quality and service to every community we work in.
+            We bring the same quality and service to every community we work
+            in.
           </p>
         </div>
 
-        <div className="mt-12 space-y-10">
-          <CityGroup label="Mississippi Gulf Coast" cities={mississippi} />
-          <div className="mx-auto h-px w-24 bg-white/15" />
-          <CityGroup label="Northern Nevada" cities={nevada} />
-        </div>
+        <ul className="mt-10 flex flex-wrap justify-center gap-2.5">
+          {mississippi.map((city) => (
+            <li key={city}>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-sm font-bold text-silver backdrop-blur transition-colors hover:border-brand/50 hover:text-white">
+                <MapPin className="h-3.5 w-3.5 text-brand" />
+                {city}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
