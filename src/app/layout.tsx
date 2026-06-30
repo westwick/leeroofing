@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Oswald } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const nunitoSans = Nunito_Sans({
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunitoSans.variable} ${oswald.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
