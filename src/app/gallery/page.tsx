@@ -4,6 +4,7 @@ import { ArrowLeft, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GalleryClient from "@/components/GalleryClient";
+import PageCTA from "@/components/PageCTA";
 import { getAllGalleryPhotos } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -57,6 +58,11 @@ export default async function GalleryPage() {
             </div>
           </div>
         </section>
+
+        <PageCTA
+          tagline="Let's make your project our next showstopper."
+          subtext="We can't wait to feature your job in this gallery."
+        />
       </main>
       <Footer />
     </>

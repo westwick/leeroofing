@@ -4,6 +4,7 @@ import { LifeBuoy, ExternalLink, ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReviewCard from "@/components/ReviewCard";
+import PageCTA from "@/components/PageCTA";
 import { getAllReviews } from "@/lib/content";
 
 const FACEBOOK_REVIEWS_URL =
@@ -63,6 +64,11 @@ export default async function ReviewsPage() {
             </div>
           </div>
         </section>
+
+        <PageCTA
+          tagline="Ready to become our next five-star review?"
+          subtext="Let's give you a roofing experience worth raving about."
+        />
       </main>
       <Footer />
     </>
