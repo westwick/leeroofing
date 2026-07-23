@@ -1,17 +1,34 @@
 items:
   - name: Tracy C.
-    body: "I was very impressed! They found the leak asap & fixed the roof on the spot! They came in less than 15 minutes!! They are local too so that really makes a difference!! Thank you!!!"
+    body: >-
+      I was very impressed! They found the leak asap & fixed the roof on the
+      spot! They came in less than 15 minutes!! They are local too so that
+      really makes a difference!! Thank you!!!
     rating: 5
     featured: true
   - name: Edward M.
-    body: "Lee Roofing was able to repair my roof for less than half the price of 3 other estimates I received. They were quick, efficient and reliable. Since getting my repairs done, Robert and his team have come by after the rainy days to double check they did what needed to be done to fix my roof. As a local business owner, unexpected expenses for repairs can be quite challenging. I highly recommend using them for any of your roofing needs."
+    body: >-
+      Lee Roofing was able to repair my roof for less than half the price of 3
+      other estimates I received. They were quick, efficient and reliable. Since
+      getting my repairs done, Robert and his team have come by after the rainy
+      days to double check they did what needed to be done to fix my roof. As a
+      local business owner, unexpected expenses for repairs can be quite
+      challenging. I highly recommend using them for any of your roofing needs.
     rating: 5
     featured: true
   - name: Randy G.
-    body: "Amazing company with good quality work at an affordable price. 10/10 will recommend to everyone I know."
+    body: >-
+      Amazing company with good quality work at an affordable price. 10/10 will
+      recommend to everyone I know.
     rating: 5
     featured: true
   - name: Ladaju B.
-    body: "They did an awesome job fixing my ceiling that was leaking and fixing the electrical wires that were rotted. I would absolutely recommend them."
+    body: >-
+      They did an awesome job fixing my ceiling that was leaking and fixing the
+      electrical wires that were rotted. I would absolutely recommend them.
     rating: 5
     featured: true
+  - name: Test 1
+    body: delete me
+    rating: 3
+    featured: false
