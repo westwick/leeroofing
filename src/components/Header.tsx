@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Menu, X, Star, ShieldCheck } from "lucide-react";
 import { nav, site } from "@/lib/site";
 
@@ -27,7 +28,7 @@ export default function Header() {
 
       {/* Main nav */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
-        <a href="#top" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <span className="grid h-14 w-14 place-items-center overflow-hidden rounded-md bg-white md:h-16 md:w-16">
             <Image
               src="/images/logo-mark.png"
@@ -44,17 +45,17 @@ export default function Header() {
               &amp; Renovation
             </span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-sm font-bold uppercase tracking-wide text-silver transition-colors hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -84,13 +85,13 @@ export default function Header() {
           <ul className="flex flex-col gap-1">
             {nav.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className="block rounded-md px-3 py-3 text-base font-bold uppercase tracking-wide text-silver hover:bg-white/5 hover:text-white"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="mt-2">

@@ -1,12 +1,6 @@
 import Image from "next/image";
 import { PhoneCall, ThumbsUp, Wrench, Handshake } from "lucide-react";
-
-const photos = [
-  { src: "/images/story-3.jpg", alt: "Close-up inspection of storm-damaged shingles" },
-  { src: "/images/story-roof-crew.jpg", alt: "Lee Roofing crew waving from a roof tear-off" },
-  { src: "/images/story-4.jpg", alt: "Lee Roofing team installing a metal roof" },
-  { src: "/images/story-1.jpg", alt: "Lee Roofing technician replacing damaged shingles" },
-];
+import { getStoryPhotos } from "@/lib/content";
 
 const points = [
   {
@@ -31,7 +25,9 @@ const points = [
   },
 ];
 
-export default function Promise() {
+export default async function Promise() {
+  const photos = (await getStoryPhotos()).slice(0, 4);
+
   return (
     <section id="story" className="bg-charcoal py-20 md:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 md:px-6 lg:grid-cols-2">

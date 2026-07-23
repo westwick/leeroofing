@@ -7,10 +7,10 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Our Story", href: "#story" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Locations", href: "#locations" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Our Story", href: "/#story" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Locations", href: "/#locations" },
+  { label: "Contact", href: "/#contact" },
 ];

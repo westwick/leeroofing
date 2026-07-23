@@ -1,0 +1,46 @@
+name: Optimize images
+
+# Client uploads via Keystatic Cloud land as commits to public/images. This
+# downscales any oversized originals and commits the result back so the repo
+# doesn't bloat. Commits made with the default GITHUB_TOKEN do not re-trigger
+# this workflow, so there is no risk of an infinite loop.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/images/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: optimize-images-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run optimize:images
+
+      - name: Commit optimized images
+        run: |
+          if [ -n "$(git status --porcelain public/images)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/images
+            git commit -m "chore: downscale oversized images"
+            git push
+          else
+            echo "No image changes to commit."
+          fi

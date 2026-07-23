@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Globe, MapPin } from "lucide-react";
 import { nav, site } from "@/lib/site";
 
@@ -29,12 +30,12 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5">
             {nav.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="text-sm text-silver/80 transition-colors hover:text-white"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
